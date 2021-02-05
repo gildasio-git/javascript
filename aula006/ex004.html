@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 004 - Formatação de Srgings</title>
+
+   <style>
+       body{
+           font:normal 20pt Arial;
+       }
+   </style>
+    <script>
+    /*
+        //FORMATANDO STRINGS
+        /Descobrindo quantos caracteres possui a string
+        var s = "javascript"
+        s.lenght //QUantos caracteres possui a string
+
+        /Converter para letras maiusculas
+        s.toUpperCase() - Converte para maiusculas
+        s.toLowerCase() - Converte para letras minusculas
+
+        observe que pode usar para escrever 
+        WRITE ou writeln
+        WRITELN em uma linha somente
+        sriteln quebra de linha
+
+        FORMATAÇÃO DE VALORES
+        n1 = 1250.09
+        n1.toFixed(2) //2 siginifica duas casas decimais 
+        ou
+        n1.toLocaleString(pt-BR', {style: 'currency', currency: 'BRL'})
+    */
+
+        var nome = window.prompt('qual seu nome')
+        document.writeln(`Ola, ${nome}! Seu nome  possui ${nome.length} letras <br>`)
+        document.writeln(`Seu nome em Maiusculo ${nome.toUpperCase()}`)
+        document.writeln(`Seu nome em Minusculo ${nome.toLowerCase()}`)
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

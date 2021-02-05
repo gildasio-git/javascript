@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 - Maniupulação de Dados</title>
+
+    <style>
+        body{
+            background-color: rgba(96, 96, 146, 0.877);
+            color: white;
+            font: normal 20px Arial;
+        }
+    </style>
+
+    <script>
+        /*
+        //CONVERTENDO STRING PARA NUMEROS 
+        O + pode ser usado para duas situações, são elas:
+
+        + = concatenação de strings
+        + = soma de numeros
+
+        portando no exemplo abaixo quando o WINDOW.PROMPT
+        sempre retorna uma string.
+        
+        Logo temos que converter praa tipos numéricos
+
+        parseint(variavel) - converte para inteiros
+        parseFloat(variavel) - converte para números fracionários
+        ou simplesmente utilize somente "number" nas versões mais novas
+        
+        //COMVERTENDO NÚMEROS PARA STRING
+        Use o string(variável) como foi feito no exemplo 
+        de conversão para numero.
+
+
+        //USANDO PLACEHOLDER PARA REFERENCIAR A VARÍAVEIS 
+        TECNICA MAIS ATUAL.
+        nome = "gildasio"
+        idade = 47
+
+        `O aluno ${aluno} com idade ${idade}`       
+        */
+
+        var n1 = Number.parseInt(window.prompt("Digite primeiro número"))
+        var n2 = Number.parseInt(window.prompt('Digite o segundo número'))
+
+        soma = (n1+n2)
+        
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${soma}`)
+           
+    </script>
+
+</head>
+<body>
+    Olá mundo!
+</body>
+</html>
