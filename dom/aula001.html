@@ -1,0 +1,104 @@
+<!-- DOM 
+         Document
+         Object
+         Model
+         
+         Cojuntos de Objetos dentro do seu navegador que vai dar acesso aos componentes internos
+         do seu Website, o DOM não funciona dentro do NODEJS. O DOM est apresente quando estou
+         rodando JavaScript dentro do meu navegador.
+
+         Arvore DOM do WEBSITE:
+         Começa da reaiz (WINDOW) tudo dentro do JavaScript esta dentro de um objeto chamado
+         WINDOW que quer dizer janela. Exemplo a janela do seu navegador é um objeto DOM e 
+         se chama WINDOW.
+
+         Dentro do "window" temos vários outros objetos
+
+         window
+               //location (localização do seu site
+                        URL, qual a página atual, página anterior)
+              
+               //document (Documento atual)
+                    /html (parte HTML do site)
+                      -> head 
+                         -> meta, title 
+                      -> body   
+                         -> body, p, p, div.
+
+
+               //history  (Guarda de onde veio para onde vai, facilita a navegação
+                        dentro do seu site, existem vários outros objetos.)
+
+         
+
+        -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+        body{
+           background: rgba(0, 0, 255, 0.096);
+           color: black;
+           font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Iniciando estudos com DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em <strong>Java Script</strong></p>
+    <div id="msg">
+        Clique em mim
+    </div>
+
+    <!--
+        Selecionando seus elementos para navegar na sua árvore DOM, existem vários métodos
+        dentre eles:
+
+        por MARCA  | getElmentsByTagName() | pode selecionar mais que um elemento.
+        por ID
+        por NOME
+        por CLASSE
+        por SELECTOR
+    -->
+
+     <script>
+        window.document.write(window.document.URL)
+
+        /*Exemplos - SELECIONANDO ELEMENTOS DENTRO DA PÁGINA */
+        
+        /*POR MARCA*/
+     
+        var p1 = window.document.getElementsByTagName('p')[0] /*Seleciona o primeiro parágrafo [0]*/
+        window.document.write(p1.innerText) /*Seleciona texto dentro do parágrafo*/
+        p1.style.color = 'blue' /*Altera a cor do conteúdo acessado*/
+        var corpo = window.document.body
+        corpo.style.background = 'green'  /*Altera a cor do body*/
+        document.write(p1.innerHTML) /*Traz o texto com as configurações do HTML*/
+
+
+        /*POR ID*/
+        var d = window.document.getElementById('msg').innerText =  "ola"
+        d.style.background = 'blue'
+
+        /*POR NOME - Para isso altera o nome do id para name div name="nome*/
+        var d = window.document.getElementsByName('msg').innerText =  "ola"
+        d.style.background = 'grenn'
+
+        /*POR SELECTOR*/
+        var d = window.document.querySelector('div#msg') /*se for classe susbstitua o # por .*/
+        d.style.color = 'black'
+    </script>
+
+    
+
+
+    
+</body>
+</html>
