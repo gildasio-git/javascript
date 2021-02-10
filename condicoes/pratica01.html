@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01 - testar país </title>
+</head>
+<body>
+    <h1>País que reside</h1>
+
+    <div id="res">
+
+    </div>
+
+    <input type="text" name="txtrs" id="txtrs">
+    <input type="button" value="verifica" onclick="verificar()">
+
+    <script>
+        function verificar(){
+            var ps = window.document.getElementById('txtrs')
+            var rs = window.document.querySelector('div#res')
+            var result = (ps.value)
+            
+            if(result != "Brasil"){
+                rs.innerHTML += `<p>Você é um Estrangeiro morando em <strong>${result}</strong>`
+            }else
+                rs.innerHTML += `<p>Você Brasileiro</p>`
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições em JSCRIPT</title>
+</head>
+<body>
+
+
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro:<input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="verificar" onclick="calcular()">
+
+    <div id="res">
+        
+    </div>
+
+    <!--Script-->
+    <script>
+        function calcular(){
+        
+        /*Aponta a varíavel para o id TXTVEL do formulário*/
+        var txtv = window.document.getElementById('txtvel')
+
+        /*Seleciona a DIV de resulado com id = RESS*/
+        var res = window.document.querySelector('div#res')
+        
+        /*Converte varíavel (string) para número */
+        var vel = Number(txtv.value)
+
+        /*Mostra resultado no browser*/    
+        res.innerHTML = `Sua velocidade atual é de ${vel}k/h`
+
+        /*Testa condição*/
+        if (vel > 60){
+            res.innerHTML += `<p> Vocẽ esta <strong>MULTADO</strong>${vel} km/h`
+        }
+
+        /*Concatena com mensagem*/
+        res.innerHTML += `<p> Diriga sempre com cinto de segurança!</p>`
+
+
+        }
+
+    </script>
+</body>
+</html>
