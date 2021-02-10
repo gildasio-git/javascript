@@ -1,0 +1,91 @@
+<!-- DOM 
+     EVENTO é tudo que pode acontecer com algum determinado objeto em
+     seu documento HTML. No exemplo abaixo criamos uma DIV#AREA
+     qualquer evento que interja com essa DIV é considerada um 
+     EVENTO.
+
+        Exemplos de EVENTOS
+        MOUSE = "mouseenter"| quando o mouse rola sobre a DIV
+                "mousemove" | ao mover o mouse dentro da DIV
+                "mousedown" | ao pressionar o mouse dentro da DIV
+                "mouseup"   | momento em que solta o botão do mouse que esta pressionado dentro da DIV
+                "click"     | ao clicar e soltar o mouse dentro da DIV
+                "mouseout"  | ao mover o mouse para fora da DIV
+
+                Existem outros, esses não são os únicos.
+                pesquise no GOOGLE sobre
+                "javascript dom event" e encontrará o site
+                https://developer.mozilla.org/pt-BR/docs/Web/events
+        
+         Poŕem praa disparar um evento é necesśario entender sobre 
+         o que é uma FUNÇÃO.
+         FUNÇÃO | conjunto de códigos que somente serão executadas quando 
+         o evento ocorrer. Para isso é necessário inserir suas linhas de código
+         dentro de um bloco "{  }" esse bloco deverá ser nomeado como uma 
+         "FUNCTION" + o nome da ação que vai acontecer, os nomes 
+         são as funções que irão ocorrer
+         
+           function "ação(parâmetros | pode ser um ou mais)" {
+                    
+                }
+            -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos com DOM</title>
+
+
+    <style>
+        div#area{
+            font:normal 20pt Arial;
+            background: rgb(132, 168, 132);
+            color: white;
+            width: 200px;
+            line-height:200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="area">
+        inter 
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area') /*chama a div pelo ID*/
+        
+        /*Em vez de criar função longa para cada ação pode ser criado uma 
+        LISTENER que será responsável por ligar o ID da div com a FUNCTION
+        
+        Obs: Caso gere algum erro você poderá usar o DEVTOOS do google chrome na função INSPECT e conseguirã
+        consultar o erro na linha ou linhas que esta ocorrendo o erro com a devida descrição do ERRO.
+        
+        */
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){   
+            a.innerText = 'clicou' /*altea o texto da div */   
+            a.style.background = 'red'     
+        }
+
+        function entrar(){
+            a.innerText = "entrou!"
+        }
+
+        function sair(){
+
+            a.innerText = "saiu!"
+            a.style.background = 'blue'
+        }
+    </script>
+
+    
+</body>
+</html>
