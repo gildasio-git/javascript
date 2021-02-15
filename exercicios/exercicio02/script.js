@@ -45,7 +45,6 @@ function verificar(){
                    img.setAttribute('src','idosa_mulher.png')
                }else{
                    //Idoso
-
                }
 
             }
