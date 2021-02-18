@@ -1,5 +1,7 @@
 /* INSTRUÇÃO COMPOSTA */
 
+
+
 console.log(`vivendo em ${pais}`)
 var pais = 'Br'
 
@@ -8,3 +10,5 @@ if(pais == 'Br'){
 }else{
     console.log('Você é Estrangeiro')
 }
+
+
