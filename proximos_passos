@@ -1,0 +1,25 @@
+FUNCTIONS
+
+OBJETOS
+
+        Diferentemente da declaração de um ARRAY que declareamos como:
+            let num [] "colchetes"
+
+        Um objeto declaramos como:
+            let amigo = {} "chaves"
+            
+            Usando o parâmetro acima não deixa limitado a apenas índices, podemos nomear nossos campos como:
+
+            let amigo = {nome:'jose',sexo:'M',peso:''85,4,engordar(p){}}
+              observe o ultimo parâmetro, existe uma função agregada.(método)
+
+
+MODULARIZAÇAO
+
+REGEX
+
+JSON 
+
+AJAX
+
+NODEJS
